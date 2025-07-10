@@ -2,7 +2,6 @@ package main
 
 import (
 	"gfvs/pkg/configs"
-	"gfvs/pkg/middleware"
 	"gfvs/pkg/server"
 
 	"github.com/gofiber/contrib/swagger"
@@ -23,10 +22,8 @@ func main() {
 	server := server.New()
 	server.RegisterFiberRoutes()
 
-	server.Use(middleware.PrometheusMiddleware())
 	server.Use("/metrics", adaptor.HTTPHandler(promhttp.Handler()))
 	server.Use(swagger.New(configs.SwgCfg))
 
-  server.Listen(":4000")
+	server.Listen(":4000")
 }
-
