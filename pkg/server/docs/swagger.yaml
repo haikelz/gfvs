@@ -1,0 +1,53 @@
+definitions:
+  models.APIErrorResponse:
+    properties:
+      message:
+        type: string
+      stack:
+        type: string
+      status_code:
+        type: integer
+    type: object
+  models.APIHomeResponse:
+    properties:
+      status_code:
+        type: integer
+      string:
+        type: string
+    type: object
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Go Fiber Vercel Starter
+  version: "1.0"
+paths:
+  /:
+    get:
+      consumes:
+      - application/json
+      description: Home
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Get Home Success
+          schema:
+            $ref: '#/definitions/models.APIHomeResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.APIErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.APIErrorResponse'
+      summary: Home
+      tags:
+      - Home
+swagger: "2.0"

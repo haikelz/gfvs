@@ -8,10 +8,12 @@ require (
 	github.com/gofiber/contrib/swagger v1.3.0
 	github.com/gofiber/fiber/v2 v2.52.8
 	github.com/prometheus/client_golang v1.20.4
+	github.com/swaggo/swag v1.16.4
 	go.uber.org/zap v1.27.0
 )
 
 require (
+	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/andybalholm/brotli v1.1.0 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -53,6 +55,7 @@ require (
 	go.uber.org/multierr v1.10.0 // indirect
 	golang.org/x/arch v0.0.0-20210923205945-b76863e36670 // indirect
 	golang.org/x/sys v0.30.0 // indirect
+	golang.org/x/tools v0.22.0 // indirect
 	google.golang.org/protobuf v1.36.5 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect

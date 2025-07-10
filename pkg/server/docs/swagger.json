@@ -1,6 +1,3 @@
-package configs
-
-const SwaggerJSON = `
 {
     "swagger": "2.0",
     "info": {
@@ -82,4 +79,3 @@ const SwaggerJSON = `
         }
     }
 }
-`

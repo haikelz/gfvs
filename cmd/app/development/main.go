@@ -17,7 +17,6 @@ import (
 // @contact.email support@swagger.io
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
-
 func main() {
 	server := server.New()
 	server.RegisterFiberRoutes()
