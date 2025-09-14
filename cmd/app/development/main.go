@@ -1,12 +1,7 @@
 package main
 
 import (
-	"gfvs/pkg/configs"
 	"gfvs/pkg/server"
-
-	"github.com/gofiber/contrib/swagger"
-	"github.com/gofiber/fiber/v2/middleware/adaptor"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 // @title Go Fiber Vercel Starter
@@ -20,9 +15,6 @@ import (
 func main() {
 	server := server.New()
 	server.RegisterFiberRoutes()
-
-	server.Use("/metrics", adaptor.HTTPHandler(promhttp.Handler()))
-	server.Use(swagger.New(configs.SwgCfg))
 
 	server.Listen(":4000")
 }

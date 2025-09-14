@@ -3,8 +3,10 @@ package controllers
 import (
 	"gfvs/pkg/models"
 	"gfvs/pkg/services"
+	"net/http"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 type GfvsController struct {
@@ -27,7 +29,11 @@ func NewGfvsController(gfvsService *services.GfvsService) *GfvsController {
 // @Router / [get]
 func HomeHandler(c *fiber.Ctx) error {
 	return c.JSON(models.APIHomeResponse{
-		StatusCode: 200,
-		Message:    "success",
+		StatusCode: http.StatusOK,
+		Message:    "success get home",
 	})
+}
+
+func PrometheusHandler() http.Handler {
+	return promhttp.Handler()
 }

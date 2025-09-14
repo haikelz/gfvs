@@ -26,7 +26,7 @@ const docTemplate = `{
     "paths": {
         "/": {
             "get": {
-                "description": "Home",
+                "description": "Get Home",
                 "consumes": [
                     "application/json"
                 ],
@@ -36,7 +36,7 @@ const docTemplate = `{
                 "tags": [
                     "Home"
                 ],
-                "summary": "Home",
+                "summary": "Get Home",
                 "responses": {
                     "200": {
                         "description": "Get Home Success",

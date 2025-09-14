@@ -13,7 +13,6 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/healthcheck"
 	"github.com/gofiber/fiber/v2/middleware/helmet"
 	"github.com/gofiber/fiber/v2/middleware/recover"
-	"go.uber.org/zap"
 )
 
 type FiberApp struct {
@@ -25,8 +24,7 @@ func New() *FiberApp {
 		App: configs.FbrCfg,
 	}
 
-	logger, _ := zap.NewProduction()
-	defer logger.Sync()
+	logger := configs.NewZap()
 
 	server.Use(fiberzap.New(fiberzap.Config{Logger: logger}))
 

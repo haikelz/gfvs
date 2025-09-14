@@ -6,4 +6,6 @@ import (
 
 func (s *FiberApp) RegisterFiberRoutes() {
 	routes.HomeRoute(s)
+	routes.SwaggerRoute(s)
+	routes.PrometheusRoute(s)
 }
