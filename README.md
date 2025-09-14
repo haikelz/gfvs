@@ -9,8 +9,7 @@ An opionated production-ready starter template (included Swagger Docs) for deplo
 - **Swagger Documentation**: API documentation using Swagger
 - **Hot Reload**: Development with Air for automatic rebuilds
 - **Structured Logging**: Using Uber's Zap logger
-- **High Performance**: Using ByteDance's Sonic for JSON handling
-- **Multiple Environments**: Separate development and production setups
+- **High Performance**: Using ByteDance's Sonic for JSON handling and Protocol Buffers for Data Representation
 
 ## Prerequisites
 
@@ -57,13 +56,6 @@ An opionated production-ready starter template (included Swagger Docs) for deplo
 ## Development
 
 The project uses Air for hot reload during development. The configuration in `.air.toml` watches for file changes and automatically rebuilds the application.
-
-Key development features:
-
-- Hot reload enabled
-- Separate development entry point
-- Build error logging
-- Excludes temporary and test files from watching
 
 ## Production Deployment
 
