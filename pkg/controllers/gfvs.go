@@ -32,8 +32,18 @@ func HomeHandler(c *fiber.Ctx) error {
 		StatusCode: http.StatusOK,
 		Message:    "success get home",
 	})
+
 }
 
+// PrometheusHandler godoc
+// @Summary Get Metrics
+// @Description Get Metrics
+// @Tags Metrics
+// @Accept json
+// @Produce json
+// @Failure 400 {object} models.APIErrorResponse "Bad Request"
+// @Failure 500 {object} models.APIErrorResponse "Internal Server Error"
+// @Router /metrics [get]
 func PrometheusHandler() http.Handler {
 	return promhttp.Handler()
 }

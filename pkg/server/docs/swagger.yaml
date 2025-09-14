@@ -50,4 +50,23 @@ paths:
       summary: Get Home
       tags:
       - Home
+  /metrics:
+    get:
+      consumes:
+      - application/json
+      description: Get Metrics
+      produces:
+      - application/json
+      responses:
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.APIErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.APIErrorResponse'
+      summary: Get Metrics
+      tags:
+      - Metrics
 swagger: "2.0"

@@ -20,7 +20,7 @@ const SwaggerJSON = `
     "paths": {
         "/": {
             "get": {
-                "description": "Home",
+                "description": "Get Home",
                 "consumes": [
                     "application/json"
                 ],
@@ -30,7 +30,7 @@ const SwaggerJSON = `
                 "tags": [
                     "Home"
                 ],
-                "summary": "Home",
+                "summary": "Get Home",
                 "responses": {
                     "200": {
                         "description": "Get Home Success",
@@ -38,6 +38,35 @@ const SwaggerJSON = `
                             "$ref": "#/definitions/models.APIHomeResponse"
                         }
                     },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/models.APIErrorResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/models.APIErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/metrics": {
+            "get": {
+                "description": "Get Metrics",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Metrics"
+                ],
+                "summary": "Get Metrics",
+                "responses": {
                     "400": {
                         "description": "Bad Request",
                         "schema": {
